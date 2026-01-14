@@ -39,7 +39,7 @@ body {
 .hero-title {
     color: white;
     font-size: clamp(2.2rem, 5vw, 4rem);
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.2;
     text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
@@ -75,7 +75,7 @@ p {
 
 h2 {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--primary-green);
     margin: 50px 0 25px;
 }
