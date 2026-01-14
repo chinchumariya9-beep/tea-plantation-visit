@@ -1,0 +1,166 @@
+/* Styling Variables */
+:root {
+    --primary-green: #1b4332;
+    --accent-green: #40916c;
+    --bg-color: #fcfdfc;
+    --essentials-bg: #f1f8f5;
+    --text-main: #333333;
+    --font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* Hero Header */
+.hero-section {
+    width: 100%;
+    height: 85vh;
+    background: url('https://lindeavecmathew.com/wp-content/uploads/2026/01/IMG_6720.jpeg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    color: white;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Content Layout */
+.content-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* STARTING QUOTE - Screenshot Style */
+.intro-quote {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.intro-quote p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #666;
+    text-align: center; /* Quote remains centered */
+}
+
+/* TEXT ALIGNMENT: JUSTIFY */
+p {
+    text-align: justify;
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin: 50px 0 25px;
+}
+
+/* Images & Grids */
+.full-width-img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 35px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* ESSENTIALS CARD - Screenshot Design */
+.essentials-container {
+    background-color: var(--essentials-bg);
+    padding: 50px;
+    border-radius: 25px;
+    margin-top: 90px;
+}
+
+.essentials-header {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.essentials-list {
+    list-style: none;
+}
+
+.essentials-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: justify; /* Justified text in card */
+}
+
+.essentials-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-green);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.essentials-list strong {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 60px 0;
+    color: #aaa;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .content-wrapper { padding: 50px 20px; }
+    .hero-title { font-size: 2.4rem; }
+    .photo-grid { grid-template-columns: 1fr; }
+    .photo-grid img { height: 350px; }
+    .essentials-container { padding: 30px; }
+    p { text-align: left; } /* Better readability on small screens */
+    .intro-quote p { font-size: 1.3rem; }
+}
